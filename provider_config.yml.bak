@@ -36,7 +36,7 @@ info:
    groupId: $project.groupId$
    artifactId: $project.artifactId$
    version: $project.version$
-   peplo: 张三
+   peplo: zhangsan
    tel: 110
 ---
 server:
@@ -66,11 +66,11 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:2004/eureka
+    defaultZone: http://localhost:2004/eureka
 
 info:
-   groupId: $project.groupId$
-   artifactId: $project.artifactId$
-   version: $project.version$
-   peplo: 张三
-   tel: 110
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  peplo: 张三
+  tel: 110

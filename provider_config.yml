@@ -36,7 +36,7 @@ info:
    groupId: $project.groupId$
    artifactId: $project.artifactId$
    version: $project.version$
-   peplo: 张三
+   peplo: zhangsan
    tel: 110
 ---
 server:
@@ -72,5 +72,5 @@ info:
   groupId: $project.groupId$
   artifactId: $project.artifactId$
   version: $project.version$
-  peplo: 张三
+  peplo: zhangsan
   tel: 110
