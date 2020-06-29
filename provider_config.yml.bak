@@ -1,4 +1,4 @@
-spring: 
+spring:
   profiles:
     active:
     - dev
@@ -6,11 +6,10 @@ spring:
 server:
   port: 1004
   context-path: /
-  
-# 数据源配置
+
 spring:
   profiles: dev
-  application: 
+  application:
     name: microservice-student
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -22,57 +21,56 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-     
+
 eureka:
   instance:
     hostname: localhost
     appname: microservice-student
     instance-id: microservice-student:1004
     prefer-ip-address: true
-  client: 
-    service-url: 
+  client:
+    service-url:
       defaultZone: http://localhost:2004/eureka
-       
-info: 
+
+info:
    groupId: $project.groupId$
    artifactId: $project.artifactId$
    version: $project.version$
-   负责人: 张三
-   联系电话: 110
+   peplo: 张三
+   tel: 110
 ---
 server:
   port: 1004
   context-path: /
-  
-# 数据源配置
+
 spring:
   profiles: test
-  application: 
+  application:
     name: microservice-student
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_springcloud2
-    username: root
-    password: 123456
+    url: jdbc:mysql://192.168.31.67:3306/test
+    username: test
+    password: 123
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-     
+
 eureka:
   instance:
-    hostname: localhost  #eureka客户端主机实例名称
-    appname: microservice-student  #客户端服务名
-    instance-id: microservice-student:1004 #客户端实例名称
-    prefer-ip-address: true #显示IP
-  client: 
-    service-url: 
-      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
-       
-info: 
+    hostname: localhost
+    appname: microservice-student
+    instance-id: microservice-student:1004
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:2004/eureka
+
+info:
    groupId: $project.groupId$
    artifactId: $project.artifactId$
    version: $project.version$
-   负责人: 张三
-   联系电话: 110
+   peplo: 张三
+   tel: 110
